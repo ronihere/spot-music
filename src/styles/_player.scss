@@ -1,0 +1,85 @@
+.Player{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.time-control{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    input{
+        width: 90%;
+        -webkit-appearance: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    p{
+        padding: 1rem;
+    }
+    
+}
+input[type="range"]:focus{
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    // background: rgb(38, 8, 8);
+}
+.input-range{
+    background: rgb(171, 145, 145);
+    width: 100%;
+    height: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.animate-input{
+        background: rgb(227, 236, 231);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        transform: translateX(0%);
+        border-radius: 1rem;
+        pointer-events: none;
+    }
+
+.play-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 35%;
+    svg{
+        cursor: pointer;
+    }
+}
+
+*{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155,155,155,0.5) transparent;
+}
+*::-webkit-scrollbar{
+    width: 5px;
+}
+*::-webkit-scrollbar-thumb{
+    background: transparent;
+}
+*::-webkit-scrollbar-track{
+    background-color:  rgba(155,155,155,0.5) ;
+    border-radius: 20px;
+    border: transparent;
+}
+
+
+@media screen and (max-width: 768px) {
+    .time-control{
+        width: 90%;
+    }
+    .play-control{
+        width: 55%;
+    }
+}
